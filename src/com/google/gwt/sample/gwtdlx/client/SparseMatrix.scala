@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.google.gwt.sample.gwtdlx.solver
+package com.google.gwt.sample.gwtdlx.client
 
 import scala.collection.mutable.Map
 
@@ -175,7 +175,7 @@ class SparseMatrix (rows : List[List[Int]]) {
 
     val uniqueIndices = Util.uniq(indices.toList)
 
-    (uniqueIndices).sort(_ < _)
+    (uniqueIndices).sortWith(_ < _)
   }
 
   def occupied_colindices() = occupied_indices(2)
@@ -298,5 +298,4 @@ class Column(name:Int) extends Node(-1,-1) {
   * There's some better way to express this; a Column Header isn't really a
   * specific type of Column. But it needs to sit in the same list.
   */
-class ColumnHeader extends Column(-1) {
-}
+class ColumnHeader extends Column(-1)
