@@ -42,6 +42,7 @@ object StyleSheetLoader {
   private class StyleTesterTimer(refStyleName: String, private val callback: Command) extends Timer {
     private val refWidget = new Label
 
+    // Create the reference Widget
     refWidget.setStyleName(refStyleName)
     refWidget.getElement.getStyle.setProperty("position", "absolute")
     refWidget.getElement.getStyle.setProperty("visibility", "hidden")
@@ -54,10 +55,17 @@ object StyleSheetLoader {
     RootPanel.get.add(refWidget)
 
     def run: Unit = {
+      // Redisplay the reference widget so it redraws itself
       refWidget.setVisible(false)
       refWidget.setVisible(true)
+
+      // Check the dimensions of the reference widget
       if (refWidget.getOffsetWidth > 0) {
         RootPanel.get.remove(refWidget)
+
+        // Fire the callback in a DeferredCommand to ensure the browser has
+        // enough time to parse the styles. Otherwise, we'll get weird styling
+        // issues.
         DeferredCommand.addCommand(callback)
       }
       else {
