@@ -188,7 +188,7 @@ class CwMessagesExample(constants: CwMessagesExample.CwConstants) extends Conten
 
     // Return the layout Widget
     updateMessage()
-    return layout
+    layout
   }
 
   override def onInitializeComplete() {

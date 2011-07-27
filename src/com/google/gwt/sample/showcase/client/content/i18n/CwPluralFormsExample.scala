@@ -152,7 +152,7 @@ class CwPluralFormsExample(constants: CwPluralFormsExample.CwConstants) extends 
 
     // Return the layout Widget
     updateMessage()
-    return layout
+    layout
   }
 
   override def onInitializeComplete() {

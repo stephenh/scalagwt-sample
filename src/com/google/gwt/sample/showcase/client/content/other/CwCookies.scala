@@ -162,7 +162,7 @@ class CwCookies(constants: CwCookies.CwConstants) extends ContentWidget(constant
 
     // Return the main layout
     refreshExistingCookies(null)
-    return mainLayout
+    mainLayout
   }
   
   override def asyncOnInitialize(callback:AsyncCallback[Widget]) {
@@ -218,13 +218,12 @@ class CwCookies(constants: CwCookies.CwConstants) extends ContentWidget(constant
     if (existingCookiesBox.getItemCount() < 1) {
       cookieNameBox.setText("")
       cookieValueBox.setText("")
-      return
+    } else {
+      val selectedIndex = existingCookiesBox.getSelectedIndex()
+      val cookieName = existingCookiesBox.getValue(selectedIndex)
+      val cookieValue = Cookies.getCookie(cookieName)
+      cookieNameBox.setText(cookieName)
+      cookieValueBox.setText(cookieValue)
     }
-
-    val selectedIndex = existingCookiesBox.getSelectedIndex()
-    val cookieName = existingCookiesBox.getValue(selectedIndex)
-    val cookieValue = Cookies.getCookie(cookieName)
-    cookieNameBox.setText(cookieName)
-    cookieValueBox.setText(cookieValue)
   }
 }

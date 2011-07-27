@@ -68,7 +68,7 @@ class CwFlowPanel(constants: CwFlowPanel.CwConstants) extends ContentWidget(cons
     }
 
     // Return the content
-    return flowPanel;
+    flowPanel;
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

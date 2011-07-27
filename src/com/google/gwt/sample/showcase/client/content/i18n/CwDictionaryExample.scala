@@ -93,7 +93,7 @@ class CwDictionaryExample(constants: CwDictionaryExample.CwConstants) extends Co
     layout.add(userInfoGrid)
 
     // Return the layout Widget
-    return layout
+    layout
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

@@ -67,7 +67,7 @@ class CwVerticalPanel(constants: CwVerticalPanel.CwConstants) extends ContentWid
 
     // Return the content
     vPanel.ensureDebugId("cwVerticalPanel")
-    return vPanel
+    vPanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

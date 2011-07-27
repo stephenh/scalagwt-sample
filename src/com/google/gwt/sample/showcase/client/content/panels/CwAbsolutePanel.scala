@@ -155,7 +155,7 @@ class CwAbsolutePanel(constants: CwAbsolutePanel.CwConstants) extends ContentWid
     mainLayout.add(optionsWrapper);
     mainLayout.add(absolutePanelWrapper);
 
-    return mainLayout;
+    mainLayout;
   }
 
   /**
@@ -224,7 +224,7 @@ class CwAbsolutePanel(constants: CwAbsolutePanel.CwConstants) extends ContentWid
     leftPosBox.addKeyUpHandler(repositionHandler);
 
     // Return the options bar
-    return optionsBar;
+    optionsBar;
   }
 
   /**

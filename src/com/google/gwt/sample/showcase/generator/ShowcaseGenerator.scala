@@ -323,7 +323,7 @@ class ShowcaseGenerator extends Generator {
     }
 
     // Return the file contents as a string
-    return fileContentsBuf.toString()
+    fileContentsBuf.toString()
   }
 
   /**
@@ -343,7 +343,7 @@ class ShowcaseGenerator extends Generator {
       }
       cssContents += getResourceContents(path) + "\n\n"
     }
-    return cssContents
+    cssContents
   }
 
   /**

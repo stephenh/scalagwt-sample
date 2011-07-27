@@ -82,7 +82,7 @@ class CwBasicButton(constants: CwBasicButton.CwConstants) extends ContentWidget(
     hPanel.add(disabledButton)
 
     // Return the panel
-    return hPanel
+    hPanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

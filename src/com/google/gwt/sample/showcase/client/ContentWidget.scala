@@ -292,7 +292,7 @@ abstract class ContentWidget(constants: ContentWidget.CwConstants) extends LazyP
       add(styleWidget, constants.contentWidgetStyle())
     }
 
-    return deckPanel
+    deckPanel
   }
 
   override protected def onLoad(): Unit = {

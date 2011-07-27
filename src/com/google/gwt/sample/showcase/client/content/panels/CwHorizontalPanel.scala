@@ -67,7 +67,7 @@ class CwHorizontalPanel(constants: CwHorizontalPanel.CwConstants) extends Conten
 
     // Return the content
     hPanel.ensureDebugId("cwHorizontalPanel")
-    return hPanel
+    hPanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

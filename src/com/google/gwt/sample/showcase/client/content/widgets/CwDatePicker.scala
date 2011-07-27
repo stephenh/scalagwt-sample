@@ -93,7 +93,7 @@ class CwDatePicker(constants: CwDatePicker.CwConstants) extends ContentWidget(co
     vPanel.add(datePicker)
     vPanel.add(new HTML(constants.cwDatePickerBoxLabel))
     vPanel.add(dateBox)
-    return vPanel
+    vPanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

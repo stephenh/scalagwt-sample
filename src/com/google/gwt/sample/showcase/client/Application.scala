@@ -213,11 +213,10 @@ class Application extends Composite with ResizeHandler with HasSelectionHandlers
    def onResize(event: ResizeEvent): Unit = onWindowResized(event.getWidth, event.getHeight)
 
    def onWindowResized(width: Int, height: Int): Unit = {
-      if (width == windowWidth || width < 1) {
-         return
+      if (width != windowWidth && width >= 1) {
+        windowWidth = width
+        onWindowResizedImpl(width)
       }
-      windowWidth = width
-      onWindowResizedImpl(width)
    }
 
    /**

@@ -87,7 +87,7 @@ class CwTabPanel(constants: CwTabPanel.CwConstants) extends ContentWidget(consta
     // Return the content
     tabPanel.selectTab(0)
     tabPanel.ensureDebugId("cwTabPanel")
-    return tabPanel
+    tabPanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

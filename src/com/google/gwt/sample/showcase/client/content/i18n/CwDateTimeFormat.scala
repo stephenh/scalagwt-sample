@@ -152,7 +152,7 @@ class CwDateTimeFormat(constants: CwDateTimeFormat.CwConstants) extends ContentW
 
     // Return the layout Widget
     updatePattern()
-    return layout
+    layout
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

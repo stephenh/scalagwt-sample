@@ -156,7 +156,7 @@ class CwConstantsWithLookupExample(constants: CwConstantsWithLookupExample.CwCon
 
     // Return the layout Widget
     updateColor()
-    return layout
+    layout
   }
 
   override def onInitializeComplete() {

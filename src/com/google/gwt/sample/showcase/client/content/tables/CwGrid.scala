@@ -69,7 +69,7 @@ class CwGrid(constants: CwGrid.CwConstants) extends ContentWidget(constants) {
 
     // Return the panel
     grid.ensureDebugId("cwGrid")
-    return grid
+    grid
   }
 
   override def asyncOnInitialize(callback:AsyncCallback[Widget]) {

@@ -76,7 +76,7 @@ class CwVerticalSplitPanel(constants: CwVerticalSplitPanel.CwConstants) extends 
     decPanel.setWidget(vSplit);
 
     // Return the content
-    return decPanel;
+    decPanel;
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

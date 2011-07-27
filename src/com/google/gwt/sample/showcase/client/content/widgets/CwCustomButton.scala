@@ -103,7 +103,7 @@ class CwCustomButton(constants: CwCustomButton.CwConstants) extends ContentWidge
     togglePanel.add(disabledToggleButton)
 
     // Return the panel
-    return vpanel
+    vpanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

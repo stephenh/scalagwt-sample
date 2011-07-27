@@ -69,7 +69,7 @@ class CwRichText(constants: CwRichText.CwConstants) extends ContentWidget(consta
     grid.setStyleName("cw-RichText")
     grid.setWidget(0, 0, toolbar)
     grid.setWidget(1, 0, area)
-    return grid
+    grid
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

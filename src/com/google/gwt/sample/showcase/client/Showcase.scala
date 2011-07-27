@@ -232,9 +232,8 @@ class Showcase extends EntryPoint {
     * @return the content widget token.
     */
    private def getContentWidgetToken(content: ContentWidget): String = {
-      var className = content.getClass.getName
-      className = className.substring(className.lastIndexOf('.') + 1)
-      return className
+      val className = content.getClass.getName
+      className.substring(className.lastIndexOf('.') + 1)
    }
 
    /**
@@ -249,7 +248,7 @@ class Showcase extends EntryPoint {
       if (LocaleInfo.getCurrentLocale.isRTL) {
          gwtRef += "-rtl"
       }
-      return gwtRef
+      gwtRef
    }
 
    /**

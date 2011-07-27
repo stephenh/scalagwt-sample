@@ -102,7 +102,7 @@ class CwFlexTable(constants: CwFlexTable.CwConstants) extends ContentWidget(cons
 
     // Return the panel
     flexTable.ensureDebugId("cwFlexTable")
-    return flexTable
+    flexTable
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

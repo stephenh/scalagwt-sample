@@ -145,7 +145,7 @@ class CwNumberFormat(constants: CwNumberFormat.CwConstants) extends ContentWidge
 
     // Return the layout Widget
     updatePattern()
-    return layout
+    layout
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

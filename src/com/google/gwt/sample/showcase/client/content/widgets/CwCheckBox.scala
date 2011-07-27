@@ -77,7 +77,7 @@ class CwCheckBox(constants: CwCheckBox.CwConstants) extends ContentWidget(consta
     }
 
     // Return the panel of checkboxes
-    return vPanel
+    vPanel
   }
 
   override protected def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

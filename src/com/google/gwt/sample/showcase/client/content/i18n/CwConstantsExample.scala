@@ -135,7 +135,7 @@ class CwConstantsExample(constants: CwConstantsExample.CwConstants) extends Cont
     layout.setWidget(3, 1, colorBox)
 
     // Return the layout Widget
-    return layout
+    layout
   }
 
   override def onInitializeComplete() {

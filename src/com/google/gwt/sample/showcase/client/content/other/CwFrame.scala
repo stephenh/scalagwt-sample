@@ -94,7 +94,7 @@ class CwFrame(constants: CwFrame.CwConstants) extends ContentWidget(constants) {
     val vPanel = new VerticalPanel()
     vPanel.add(optionsPanel)
     vPanel.add(frame)
-    return vPanel
+    vPanel
   }
 
   override def asyncOnInitialize(callback:AsyncCallback[Widget]) {

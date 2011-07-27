@@ -113,7 +113,7 @@ class CwBasicPopup(constants: CwBasicPopup.CwConstants) extends ContentWidget(co
     vPanel.add(jimmyThumb)
 
     // Return the panel
-    return vPanel
+    vPanel
   }
 
   override def asyncOnInitialize(callback:AsyncCallback[Widget]) {

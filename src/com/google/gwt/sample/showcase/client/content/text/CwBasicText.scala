@@ -110,7 +110,7 @@ class CwBasicText(constants: CwBasicText.CwConstants) extends ContentWidget(cons
     vpanel.add(createTextExample(textArea, true))
 
     // Return the panel
-    return vpanel
+    vpanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {
@@ -152,7 +152,7 @@ class CwBasicText(constants: CwBasicText.CwConstants) extends ContentWidget(cons
     }
 
     // Return the panel
-    return hPanel
+    hPanel
   }
 
   /**

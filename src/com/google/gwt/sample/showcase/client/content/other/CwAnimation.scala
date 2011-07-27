@@ -216,7 +216,7 @@ class CwAnimation(constants: CwAnimation.CwConstants) extends ContentWidget(cons
     animation = new CustomAnimation()
 
     // Return the layout
-    return mainLayout
+    mainLayout
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) {
@@ -256,7 +256,7 @@ class CwAnimation(constants: CwAnimation.CwConstants) extends ContentWidget(cons
     optionsBar.add(cancelButton)
 
     // Return the options bar
-    return optionsBar
+    optionsBar
   }
 
 }

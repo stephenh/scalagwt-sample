@@ -81,7 +81,7 @@ class CwDisclosurePanel(constants: CwDisclosurePanel.CwConstants) extends Conten
     vPanel.add(createAdvancedForm())
 
     // Return the panel
-    return vPanel
+    vPanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) {

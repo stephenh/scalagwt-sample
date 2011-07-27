@@ -109,7 +109,7 @@ class CwDialogBox(constants: CwDialogBox.CwConstants) extends ContentWidget(cons
     vPanel.add(list)
 
     // Return the panel
-    return vPanel
+    vPanel
   }
   
   override def asyncOnInitialize(callback:AsyncCallback[Widget]) {
@@ -162,6 +162,6 @@ class CwDialogBox(constants: CwDialogBox.CwConstants) extends ContentWidget(cons
     }
 
     // Return the dialog box
-    return dialogBox
+    dialogBox
   }
 }

@@ -90,7 +90,7 @@ class CwDecoratorPanel(constants: CwDecoratorPanel.CwConstants) extends ContentW
     // Wrap the content in a DecoratorPanel
     val decPanel = new DecoratorPanel()
     decPanel.setWidget(layout)
-    return decPanel
+    decPanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) {

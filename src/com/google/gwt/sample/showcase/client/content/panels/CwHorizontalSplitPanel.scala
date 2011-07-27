@@ -76,7 +76,7 @@ class CwHorizontalSplitPanel(constants: CwHorizontalSplitPanel.CwConstants) exte
     decPanel.setWidget(hSplit)
 
     // Return the content
-    return decPanel
+    decPanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

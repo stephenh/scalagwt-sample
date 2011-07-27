@@ -92,7 +92,7 @@ class CwDockPanel(constants: CwDockPanel.CwConstants) extends ContentWidget(cons
 
     // Return the content
     dock.ensureDebugId("cwDockPanel")
-    return dock
+    dock
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {

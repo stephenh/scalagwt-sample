@@ -73,7 +73,7 @@ class CwHyperlink(constants: CwHyperlink.CwConstants) extends ContentWidget(cons
     vPanel.add(getHyperlink(classOf[CwDatePicker], allConstants.cwDatePickerName))
 
     // Return the panel
-    return vPanel
+    vPanel
   }
 
   override protected def asyncOnInitialize(callback: AsyncCallback[Widget]) = {
@@ -104,6 +104,6 @@ class CwHyperlink(constants: CwHyperlink.CwConstants) extends ContentWidget(cons
     // Convert to a hyper link
     val link = new Hyperlink(name, className)
     link.ensureDebugId("cwHyperlink-" + className)
-    return link
+    link
   }
 }

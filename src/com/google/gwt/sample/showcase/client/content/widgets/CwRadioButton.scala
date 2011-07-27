@@ -94,7 +94,7 @@ class CwRadioButton(constants: CwRadioButton.CwConstants) extends ContentWidget(
       vPanel.add(radioButton)
     }
 
-    return vPanel
+    vPanel
   }
 
   override def asyncOnInitialize(callback: AsyncCallback[Widget]) = {
