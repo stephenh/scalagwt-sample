@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="foo">
+  <inherits name="com.google.gwt.user.User"/>
+  <entry-point class="com.google.gwt.sample.foo.client.Foo"/>
+  <source path="client"/>
+  <set-property name="user.agent" value="safari"/>
+</module>
