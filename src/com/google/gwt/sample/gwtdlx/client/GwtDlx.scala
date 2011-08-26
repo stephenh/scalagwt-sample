@@ -28,6 +28,7 @@ import com.google.gwt.user.client.ui._
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 class GwtDlx extends EntryPoint {
+   private val grid: Grid = new Grid(9, 9)
    private val ajax: Label = new Label("ajax: the cloud is thinking.")
    private val api: SudokuApiAsync = GWT.create(classOf[SudokuApi])
    private val noSolution: HTML = new HTML("&empty;")
@@ -39,6 +40,7 @@ class GwtDlx extends EntryPoint {
       button addClickHandler onClick
       clearButton addClickHandler onClear
 
+      RootPanel.get("board").add(grid)
       RootPanel.get("button").add(button)
       RootPanel.get("button").add(clearButton)
 
@@ -65,6 +67,7 @@ class GwtDlx extends EntryPoint {
                         Array(" ", "7", "8",   "9", " ", "5",   " ", "6", " "))
       for (r <- 0 until 9) {
         for (c <- 0 until 9) {
+          grid.setWidget(r, c, createCell)
           getBox(r, c).setValue(board(r)(c))
         }
       }
@@ -97,10 +100,14 @@ class GwtDlx extends EntryPoint {
       api.solveSudoku(board, new Callback)
    }
 
-   private def getBox(r: Int, c: Int): InputElement = {
-      val cellname = "cell" + r + c
-      Document.get.getElementById(cellname).asInstanceOf[InputElement]
+   private def createCell: TextBox = {
+     val cell = new TextBox()
+     cell.setMaxLength(1)
+     cell.setStyleName("cell")
+     cell
    }
+
+   private def getBox(r: Int, c: Int): TextBox = grid.getWidget(r, c).asInstanceOf[TextBox]
 
    private class Callback extends AsyncCallback[Array[Array[Int]]] {
       def onFailure(caught: Throwable) = {}
