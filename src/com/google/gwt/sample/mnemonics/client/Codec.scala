@@ -12,7 +12,7 @@ class Coder(words: List[String]) {
     for ((digit, str) <- mnemonics; ltr <- str) yield (ltr -> digit)
 
   /** Maps a word to the digit string it can represent, e.g. "Java" -> "5282" */
-  private def wordCode(word: String) = word.toUpperCase map charCode
+  def wordCode(word: String) = word.toUpperCase map charCode
 
   /** A map from digit strings to the words that represent them,
     * e.g. "5282" -> Set("Java", "Kata", "Lava", ...) */
