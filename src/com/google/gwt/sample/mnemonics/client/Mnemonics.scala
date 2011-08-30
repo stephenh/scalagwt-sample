@@ -1,21 +1,19 @@
 package com.google.gwt.sample.mnemonics.client
 
 import com.google.gwt.core.client.EntryPoint
-import com.google.gwt.event.dom.client.ClickEvent
-import com.google.gwt.event.dom.client.ClickHandler
 import com.google.gwt.event.dom.client.KeyUpHandler
 import com.google.gwt.event.dom.client.KeyUpEvent
 import com.google.gwt.user.client.ui.Button
 import com.google.gwt.user.client.Window
 import com.google.gwt.user.client.ui._
 import com.google.gwt.user.client.DOM
-import com.google.gwt.dom.client.LabelElement
+import com.google.gwt.dom.client.Document
 
 import scala.collection.JavaConversions._
 
 class Mnemonics extends EntryPoint {
   
-  val dict = List("Scala", "rocks", "Pack", "brocks", "GWT", "implicit", "nice", "ScalaGWT")
+  val dict = List("Scala", "rocks", "Pack", "brocks", "GWT", "implicit", "nice", "ScalaGWT", "cat", "EFPL", "Lausanne")
   val coder = new Coder(dict)
 
   def onModuleLoad() {
@@ -34,6 +32,8 @@ class Mnemonics extends EntryPoint {
     t addKeyUpHandler new KeyUpHandler {
       def onKeyUp(event: KeyUpEvent) = {
         val mnemonics = coder.translate(t.getText())
+        if (mnemonics contains "implicit cat")
+          Document.get().getElementById("implicitcat").setAttribute("class", "modal")
         val output = new HTMLPanel(if (mnemonics.isEmpty) "<i>No mnemonics found<i/>" else mnemonics mkString "<br/>")
         output.addStyleName("well")
         output.addStyleName("output")
