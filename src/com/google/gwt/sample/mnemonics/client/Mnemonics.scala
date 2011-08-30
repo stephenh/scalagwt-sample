@@ -44,6 +44,7 @@ class Mnemonics extends EntryPoint {
     mainPanel.add(inputPanel)
     mainPanel.add(outputPanel)
     addSuggestions(mainPanel)
+    Prettify.prettyPrint()
     t.setFocus(true)
   }
   
