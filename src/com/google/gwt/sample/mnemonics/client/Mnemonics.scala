@@ -11,6 +11,10 @@ import com.google.gwt.dom.client.Document
 
 import scala.collection.JavaConversions._
 
+/**
+  * Handles page updates. This code is not an example of GWT idiomatic code but rather a quick
+  * hack.
+  */
 class Mnemonics extends EntryPoint {
   
   val dict = List("Scala", "rocks", "Pack", "brocks", "GWT", "implicit", "nice", "ScalaGWT", "cat", "EFPL", "Lausanne")
