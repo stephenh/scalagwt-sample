@@ -23,7 +23,7 @@ class Mnemonics extends EntryPoint {
     val inputPanel = new FlowPanel
     inputPanel.setStyleName("input")
     t.addStyleName("xlarge")
-    t.addStyleName("phonenumber")
+    t.getElement().setId("phonenumber")
     inputPanel.add(t)
     val outputPanel = new FlowPanel
     outputPanel.add(l)
