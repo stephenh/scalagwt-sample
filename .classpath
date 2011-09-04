@@ -9,6 +9,10 @@
 	<classpathentry exported="true" kind="lib" path="lib/gwt/validation-api-1.0.0.GA-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/scala/jribble_2.9.0-1-0.1-SNAPSHOT.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/scala/scala-library.jar"/>
-	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/gwt/gwt-jribble.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gwt/gwt-scala.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/scala/scala-compiler.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/scala/scala-library-jribble.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/scala/factorymanifests.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
