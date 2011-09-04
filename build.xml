@@ -45,7 +45,6 @@
       <arg value="com.google.gwt.sample.jribble.Hello"/>
       <arg value="com.google.gwt.sample.mnemonics.Mnemonics"/>
       <arg value="com.google.gwt.sample.showcase.Showcase"/>
-      <arg value="com.google.gwt.sample.gwtdlx.gwtdlx"/>
     </java>
   </target>
   
